@@ -142,11 +142,20 @@ export async function createWorkerWindow(preloadUrl, mainUrl) {
   // }
 }
 
-export async function exportTreePackage(inputFiles, outputFile) {
+export async function exportTreePackage(inputFiles, outputFile, treeOptions = { scale: 1 }) {
   const exportWorker = await getWorker('export.worker.js'); 
   // const wasmUrl = require('url').pathToFileURL(path.join(EXTRA_RESOURCE_PATH, 'basis/basis_encoder.wasm')).href;
   log.info(`wasmPath: ${wasmPath}`);
-  await exportWorker.exportTreePackage(inputFiles, outputFile, { wasmPath });
+  await exportWorker.exportTreePackage(
+    inputFiles,
+    outputFile,
+    treeOptions.generatedBillboard
+      ? Transfer(treeOptions, [treeOptions.generatedBillboard])
+      : treeOptions,
+
+    // treeOptions,
+    { wasmPath }
+  );
 }
 
 export async function generateFlowMapPNG(polygon, spine) {
@@ -167,8 +176,14 @@ export async function compressTextures(doc, onProgress = () => {}) {
 
   await pMap(textures, async (texture) => {
     const rawImage = texture.getImage();
+    // Normal/ORM are data — sRGB transfer decodes them wrong on the GPU
+    // (bent normals + skewed roughness = white speckle at distance).
+    // const srgb = !/(_normal|_orm)$/.test(texture.getName() ?? '');
+    // Data textures (normals, ORM, lightmap) must not get the sRGB transfer flag
+    const srgb = !/(_normal|_orm|light_map)$/.test(texture.getName() ?? '');    
     const ktx2Buffer = await pool.queue(worker =>
-      worker.compressTexture(Transfer(rawImage.buffer), { wasmPath })
+      // worker.compressTexture(Transfer(rawImage.buffer), { wasmPath })
+      worker.compressTexture(Transfer(rawImage.buffer), { wasmPath, srgb })
     );
 
     texture.setImage(new Uint8Array(ktx2Buffer));
