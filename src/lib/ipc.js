@@ -6,8 +6,9 @@ import * as imagery from './imagery';
 import * as tools from './tools';
 import * as colors from './colors';
 import * as plants from './cache/plants';
+import { createTreeMakerWindow } from '../trees/main';
 import { exportMeshes } from './export';
-import { generateTerrain, importTerrainData } from './terrain';
+import { importTerrainData } from './terrain';
 import { changeToolsPath, getRecentProjects, getToolsPath } from './app';
 
 
@@ -45,7 +46,11 @@ ipcMain.handle('project.getHeightMap', (_event) => project._heightMapCache);
 
 ipcMain.handle('project.updateHoleByNumber', (_event, holeNumber, update) => project.updateHoleByNumber(holeNumber, update));
 ipcMain.handle('project.updateScene', (_event, update) => project.updateScene(update));
+ipcMain.handle('project.updateGameSettings', (_event, update) => project.updateGameSettings(update));
 ipcMain.handle('project.selectHDRI', (_event) => project.selectHDRI());
+ipcMain.handle('project.saveCapture', (_event, data) => project.saveCapture(data));
+ipcMain.handle('project.updateSurfaces', (_event, update) => project.updateSurfaces(update));
+ipcMain.handle('project.selectSurfaceTexture', (_event, surface, textureType) => project.selectSurfaceTexture(surface, textureType));
 
 ipcMain.handle('project.updateTrees', (_event, trees) => project.updateTrees(trees));
 
@@ -60,6 +65,7 @@ ipcMain.handle('trees.remove', (_event, treeLayerId, treeConfigId) => project.re
 ipcMain.handle('trees.getAvailablePlants', (_event) => plants.getAvailablePlants());
 ipcMain.handle('trees.downloadPlantAsset', (_event, plant) => plants.downloadPlantAsset(plant));
 ipcMain.handle('trees.importPlant', (_event, layerId, plant) => plants.importPlantAsset(layerId, plant));
+ipcMain.handle('trees.createCustom', (_event) => createTreeMakerWindow());
 
 
 // ipcMain.handle('project.save', (_event) => project.saveProjectSettings());
@@ -82,7 +88,7 @@ ipcMain.handle('terrain.applySmoothing', (_event, data, radius) => project.smoot
 ipcMain.handle('terrain.smoothRivers', (_event, data) => project.smoothRivers(data));
 ipcMain.handle('terrain.smoothLakes', (_event, data) => project.smoothLakes(data));
 ipcMain.handle('terrain.saveHeightMap', (_event, data, heightScale) => project.saveHeightMap(data, heightScale));
-ipcMain.handle('terrain.generate', (_event, type) => generateTerrain(type));
+ipcMain.handle('terrain.generate', (_event, type) => project.generateHeightMap(type));
 ipcMain.handle('terrain.importTerrainData', (_event) => importTerrainData());
 
 ipcMain.handle('mesh.getCourseMesh', (_event) => project.getCourseMesh());
