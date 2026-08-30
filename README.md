@@ -2,7 +2,7 @@
 
 Meshery is OpenGolfSim's all-in-one course building tool. It makes creating real-world or fictional courses quick and easy.
 
-Head over to our [Course Building Guide](https://help.opengolfsim.com/tools/course-building/) in our help docs to learn more.
+Head over to our [Course Building Guide](https://help.opengolfsim.com/course-building/) in our help docs to learn more.
 
 
 ## Logs:
@@ -57,14 +57,6 @@ cd myenv
 ```
 
 
-## Scripts
-
-### Trees
-
-We recommend creating tree LODs in [EZ-Tree](https://www.eztree.dev/) or SpeedTree and then using the **Tree Maker** tool within Meshery to convert and import the tree to your library.
-
-
-
 ## FUSE
 
 We install `@opengolfsim/fuse` as an npm module dependency.
@@ -75,7 +67,7 @@ To install from the production/main branch:
 npm install github:opengolfsim/fuse
 ```
 
-To install from a specific branch:
+To install from a specific fork or branch:
 
 ```bash
 npm install github:opengolfsim/fuse#feat/branch-name
