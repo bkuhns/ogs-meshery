@@ -969,6 +969,43 @@ export function conformMeshToTerrain(layer, mesh, project, heightMap) {
     }
   }
 
+  // For rivers, indexes boundaryHeights so the IDW loop below can query
+  // only nearby boundary vertices instead of scanning all of them per
+  // interior mesh vertex (was O(interior vertices * boundary vertices)).
+  let boundaryGrid = null;
+  const boundaryCellSize = Math.max(layer.spacing || 1, 0.05);
+  if (isRiverSurface) {
+    boundaryGrid = new PointGrid(boundaryCellSize);
+    for (const bv of boundaryHeights) boundaryGrid.insert([bv.x, bv.z, bv.y]);
+  }
+
+  // Approximates the full IDW sum with only the nearby boundary points
+  // (weight falls off as 1/distance^2, so far-away points barely
+  // contributed anyway) - expands the search radius until enough
+  // candidates are found, falling back to the full set in the rare case
+  // the grid has too few nearby points (e.g. a hairpin bend where the
+  // opposite bank is geometrically close but the grid search under-reaches).
+  function idwHeightFromNearbyBoundary(x, z) {
+    const MIN_CANDIDATES = 8;
+    let radius = boundaryCellSize * 4;
+    let candidates = boundaryGrid.queryRadius([x, z], radius);
+    while (candidates.length < MIN_CANDIDATES && radius < boundaryCellSize * 256) {
+      radius *= 2;
+      candidates = boundaryGrid.queryRadius([x, z], radius);
+    }
+    if (!candidates.length) {
+      candidates = boundaryHeights.map(bv => [bv.x, bv.z, bv.y]);
+    }
+    let weightSum = 0, heightSum = 0;
+    for (const c of candidates) {
+      const dx = x - c[0], dz = z - c[1];
+      const w = 1 / (dx * dx + dz * dz + 0.001);
+      weightSum += w;
+      heightSum += w * c[2];
+    }
+    return heightSum / weightSum;
+  }
+
   // const mesh = layer.mesh;
   for (let index = 0; index < mesh.points.length; index += 3) {
     const x = mesh.points[index];
@@ -984,15 +1021,7 @@ export function conformMeshToTerrain(layer, mesh, project, heightMap) {
         const [tx, tz] = svgToTerrain(x, z, svgSize, heightSize);
         y = (interpHeight(heightData, tx, tz, heightSize) / 65535) * heightScale;
       } else {
-        let weightSum = 0, heightSum = 0;
-        for (const bv of boundaryHeights) {
-          const dx = x - bv.x;
-          const dz = z - bv.z;
-          const w = 1 / (dx * dx + dz * dz + 0.001);
-          weightSum += w;
-          heightSum += w * bv.y;
-        }
-        y = heightSum / weightSum;
+        y = idwHeightFromNearbyBoundary(x, z);
       }
     // } else if (isRiverSurface) {
     //   const [tx, tz] = svgToTerrain(x, z, svgSize, heightSize);
