@@ -1,0 +1,2758 @@
+{
+  "svgPath": "C:\\Users\\Bret\\dev\\ogs-meshery-perf\\course.20260904.svg",
+  "capturedAt": "2026-09-04T21:17:35.984Z",
+  "parseMs": 8,
+  "polygonsMs": 5514,
+  "skippedLayerCount": 15,
+  "layers": {
+    "river_0": {
+      "surface": "river",
+      "boundaryVertexCount": 4041,
+      "holeCount": 2,
+      "spacing": 0.2,
+      "timedOutMs": 45000
+    },
+    "river_1": {
+      "surface": "river",
+      "boundaryVertexCount": 1817,
+      "holeCount": 0,
+      "spacing": 0.2,
+      "timedOutMs": 45000
+    },
+    "fairway_2": {
+      "surface": "fairway",
+      "boundaryVertexCount": 708,
+      "holeCount": 1,
+      "spacing": 1,
+      "generateMeshMs": 602,
+      "vertexCount": 8864,
+      "triangleCount": 15155,
+      "surfaceArea": 10329.050422643078,
+      "conformMs": 17,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 619
+    },
+    "fairway_3": {
+      "surface": "fairway",
+      "boundaryVertexCount": 687,
+      "holeCount": 1,
+      "spacing": 1,
+      "generateMeshMs": 452,
+      "vertexCount": 6857,
+      "triangleCount": 11714,
+      "surfaceArea": 8128.780399358831,
+      "conformMs": 19,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 471
+    },
+    "fairway_4": {
+      "surface": "fairway",
+      "boundaryVertexCount": 604,
+      "holeCount": 0,
+      "spacing": 1,
+      "generateMeshMs": 234,
+      "vertexCount": 5494,
+      "triangleCount": 10382,
+      "surfaceArea": 8093.668629141959,
+      "conformMs": 11,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 245
+    },
+    "fairway_5": {
+      "surface": "fairway",
+      "boundaryVertexCount": 530,
+      "holeCount": 1,
+      "spacing": 1,
+      "generateMeshMs": 361,
+      "vertexCount": 6920,
+      "triangleCount": 11313,
+      "surfaceArea": 7262.050088375807,
+      "conformMs": 13,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 374
+    },
+    "fairway_6": {
+      "surface": "fairway",
+      "boundaryVertexCount": 522,
+      "holeCount": 1,
+      "spacing": 1,
+      "generateMeshMs": 330,
+      "vertexCount": 6236,
+      "triangleCount": 9958,
+      "surfaceArea": 6245.1680078320205,
+      "conformMs": 12,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 342
+    },
+    "fairway_7": {
+      "surface": "fairway",
+      "boundaryVertexCount": 510,
+      "holeCount": 1,
+      "spacing": 1,
+      "generateMeshMs": 249,
+      "vertexCount": 5035,
+      "triangleCount": 8564,
+      "surfaceArea": 5916.366568909958,
+      "conformMs": 15,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 264
+    },
+    "rough_8": {
+      "surface": "rough",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 1.5,
+      "generateMeshMs": 57,
+      "vertexCount": 2047,
+      "triangleCount": 3592,
+      "surfaceArea": 5855.034944442101,
+      "conformMs": 5,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 62
+    },
+    "fairway_9": {
+      "surface": "fairway",
+      "boundaryVertexCount": 441,
+      "holeCount": 1,
+      "spacing": 1,
+      "generateMeshMs": 224,
+      "vertexCount": 5189,
+      "triangleCount": 8155,
+      "surfaceArea": 4928.203920403798,
+      "conformMs": 10,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 234
+    },
+    "fairway_10": {
+      "surface": "fairway",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 1,
+      "generateMeshMs": 111,
+      "vertexCount": 3466,
+      "triangleCount": 6430,
+      "surfaceArea": 4907.997225175612,
+      "conformMs": 9,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 120
+    },
+    "rough_11": {
+      "surface": "rough",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 1.5,
+      "generateMeshMs": 45,
+      "vertexCount": 1723,
+      "triangleCount": 2944,
+      "surfaceArea": 4587.223054405302,
+      "conformMs": 5,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 50
+    },
+    "fairway_12": {
+      "surface": "fairway",
+      "boundaryVertexCount": 500,
+      "holeCount": 1,
+      "spacing": 1,
+      "generateMeshMs": 140,
+      "vertexCount": 3795,
+      "triangleCount": 6105,
+      "surfaceArea": 3835.1184603441507,
+      "conformMs": 8,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 148
+    },
+    "concrete_13": {
+      "surface": "concrete",
+      "boundaryVertexCount": 551,
+      "holeCount": 0,
+      "spacing": 0.2,
+      "generateMeshMs": 7316,
+      "vertexCount": 61622,
+      "triangleCount": 121890,
+      "surfaceArea": 3904.7327564843,
+      "conformMs": 102,
+      "digMs": 425,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.7000076174736023,
+        "mean": 0.574140774704017
+      },
+      "totalMs": 7843
+    },
+    "fairway_14": {
+      "surface": "fairway",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 1,
+      "generateMeshMs": 101,
+      "vertexCount": 2837,
+      "triangleCount": 5172,
+      "surfaceArea": 3889.032511631958,
+      "conformMs": 8,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 109
+    },
+    "concrete_15": {
+      "surface": "concrete",
+      "boundaryVertexCount": 568,
+      "holeCount": 0,
+      "spacing": 0.2,
+      "generateMeshMs": 4045,
+      "vertexCount": 40302,
+      "triangleCount": 80034,
+      "surfaceArea": 2549.9386066061234,
+      "conformMs": 65,
+      "digMs": 549,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.7000076174736023,
+        "mean": 0.6826688270818257
+      },
+      "totalMs": 4659
+    },
+    "concrete_16": {
+      "surface": "concrete",
+      "boundaryVertexCount": 644,
+      "holeCount": 0,
+      "spacing": 0.2,
+      "generateMeshMs": 3521,
+      "vertexCount": 40823,
+      "triangleCount": 81000,
+      "surfaceArea": 2576.8479051906615,
+      "conformMs": 66,
+      "digMs": 620,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.7000076174736023,
+        "mean": 0.6823051109907456
+      },
+      "totalMs": 4207
+    },
+    "fairway_17": {
+      "surface": "fairway",
+      "boundaryVertexCount": 500,
+      "holeCount": 1,
+      "spacing": 1,
+      "generateMeshMs": 144,
+      "vertexCount": 3974,
+      "triangleCount": 5451,
+      "surfaceArea": 2524.7116842688993,
+      "conformMs": 8,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 152
+    },
+    "concrete_18": {
+      "surface": "concrete",
+      "boundaryVertexCount": 873,
+      "holeCount": 0,
+      "spacing": 0.2,
+      "generateMeshMs": 6081,
+      "vertexCount": 38063,
+      "triangleCount": 75251,
+      "surfaceArea": 2398.4002538323402,
+      "conformMs": 61,
+      "digMs": 738,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.7000076174736023,
+        "mean": 0.6799897247022485
+      },
+      "totalMs": 6880
+    },
+    "fairway_19": {
+      "surface": "fairway",
+      "boundaryVertexCount": 467,
+      "holeCount": 0,
+      "spacing": 1,
+      "generateMeshMs": 51,
+      "vertexCount": 2053,
+      "triangleCount": 3637,
+      "surfaceArea": 2611.148150753812,
+      "conformMs": 6,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 57
+    },
+    "concrete_20": {
+      "surface": "concrete",
+      "boundaryVertexCount": 589,
+      "holeCount": 0,
+      "spacing": 0.2,
+      "generateMeshMs": 3304,
+      "vertexCount": 39056,
+      "triangleCount": 77521,
+      "surfaceArea": 2472.58046361804,
+      "conformMs": 61,
+      "digMs": 545,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.7000076174736023,
+        "mean": 0.6828898408269721
+      },
+      "totalMs": 3910
+    },
+    "fairway_21": {
+      "surface": "fairway",
+      "boundaryVertexCount": 258,
+      "holeCount": 0,
+      "spacing": 1,
+      "generateMeshMs": 36,
+      "vertexCount": 1495,
+      "triangleCount": 2730,
+      "surfaceArea": 2035.9148833893164,
+      "conformMs": 5,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 41
+    },
+    "fairway_22": {
+      "surface": "fairway",
+      "boundaryVertexCount": 500,
+      "holeCount": 1,
+      "spacing": 1,
+      "generateMeshMs": 86,
+      "vertexCount": 2925,
+      "triangleCount": 3854,
+      "surfaceArea": 1590.2973518082872,
+      "conformMs": 6,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 92
+    },
+    "concrete_23": {
+      "surface": "concrete",
+      "boundaryVertexCount": 475,
+      "holeCount": 0,
+      "spacing": 0.2,
+      "generateMeshMs": 2464,
+      "vertexCount": 28694,
+      "triangleCount": 56911,
+      "surfaceArea": 1812.5749897537783,
+      "conformMs": 48,
+      "digMs": 334,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.7000076174736023,
+        "mean": 0.6829269597353715
+      },
+      "totalMs": 2846
+    },
+    "fairway_24": {
+      "surface": "fairway",
+      "boundaryVertexCount": 500,
+      "holeCount": 1,
+      "spacing": 1,
+      "generateMeshMs": 88,
+      "vertexCount": 3219,
+      "triangleCount": 3944,
+      "surfaceArea": 1277.8791098846123,
+      "conformMs": 6,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 94
+    },
+    "concrete_25": {
+      "surface": "concrete",
+      "boundaryVertexCount": 648,
+      "holeCount": 0,
+      "spacing": 0.2,
+      "generateMeshMs": 1571,
+      "vertexCount": 25565,
+      "triangleCount": 50266,
+      "surfaceArea": 1599.0510366051458,
+      "conformMs": 46,
+      "digMs": 293,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.7000076174736023,
+        "mean": 0.6238962953859595
+      },
+      "totalMs": 1910
+    },
+    "fairway_26": {
+      "surface": "fairway",
+      "boundaryVertexCount": 405,
+      "holeCount": 1,
+      "spacing": 1,
+      "generateMeshMs": 53,
+      "vertexCount": 2030,
+      "triangleCount": 2667,
+      "surfaceArea": 1090.380399054096,
+      "conformMs": 5,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 58
+    },
+    "river_27": {
+      "surface": "river",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.2,
+      "generateMeshMs": 2431,
+      "vertexCount": 24732,
+      "triangleCount": 48962,
+      "surfaceArea": 1560.6209304723889,
+      "conformMs": 40,
+      "digMs": 293,
+      "smoothMs": 77,
+      "heightStats": {
+        "min": 0.00000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.09483435414131129
+      },
+      "blendMapMs": 2046,
+      "totalMs": 4887
+    },
+    "water_28": {
+      "surface": "water",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 2.5,
+      "generateMeshMs": 29,
+      "vertexCount": 628,
+      "triangleCount": 754,
+      "surfaceArea": 1538.6653165648968,
+      "conformMs": 2,
+      "digMs": 6,
+      "smoothMs": 2,
+      "heightStats": {
+        "min": -5.499992370605469,
+        "max": 0.5000076293945312,
+        "mean": -0.236099319947753
+      },
+      "blendMapMs": 694,
+      "totalMs": 733
+    },
+    "concrete_29": {
+      "surface": "concrete",
+      "boundaryVertexCount": 470,
+      "holeCount": 0,
+      "spacing": 0.2,
+      "generateMeshMs": 953,
+      "vertexCount": 20858,
+      "triangleCount": 41186,
+      "surfaceArea": 1310.3088932875544,
+      "conformMs": 36,
+      "digMs": 228,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.7000076174736023,
+        "mean": 0.674781371887835
+      },
+      "totalMs": 1217
+    },
+    "fairway_30": {
+      "surface": "fairway",
+      "boundaryVertexCount": 665,
+      "holeCount": 2,
+      "spacing": 1,
+      "generateMeshMs": 73,
+      "vertexCount": 3193,
+      "triangleCount": 3731,
+      "surfaceArea": 928.9557458022609,
+      "conformMs": 6,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 79
+    },
+    "water_31": {
+      "surface": "water",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 2.5,
+      "generateMeshMs": 25,
+      "vertexCount": 589,
+      "triangleCount": 676,
+      "surfaceArea": 1003.3349532060092,
+      "conformMs": 2,
+      "digMs": 5,
+      "smoothMs": 2,
+      "heightStats": {
+        "min": -5.499992370605469,
+        "max": 0.5000076293945312,
+        "mean": -0.09786429895002692
+      },
+      "blendMapMs": 274,
+      "totalMs": 308
+    },
+    "fairway_32": {
+      "surface": "fairway",
+      "boundaryVertexCount": 594,
+      "holeCount": 0,
+      "spacing": 1,
+      "generateMeshMs": 36,
+      "vertexCount": 1158,
+      "triangleCount": 1720,
+      "surfaceArea": 960.1910430490971,
+      "conformMs": 4,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 40
+    },
+    "concrete_33": {
+      "surface": "concrete",
+      "boundaryVertexCount": 658,
+      "holeCount": 0,
+      "spacing": 0.2,
+      "generateMeshMs": 649,
+      "vertexCount": 14505,
+      "triangleCount": 28350,
+      "surfaceArea": 897.9676337949932,
+      "conformMs": 28,
+      "digMs": 226,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.7000076174736023,
+        "mean": 0.6725692160743468
+      },
+      "totalMs": 903
+    },
+    "concrete_34": {
+      "surface": "concrete",
+      "boundaryVertexCount": 586,
+      "holeCount": 0,
+      "spacing": 0.2,
+      "generateMeshMs": 517,
+      "vertexCount": 12590,
+      "triangleCount": 24592,
+      "surfaceArea": 778.0608032159507,
+      "conformMs": 24,
+      "digMs": 174,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.7000076174736023,
+        "mean": 0.6759995081483419
+      },
+      "totalMs": 715
+    },
+    "river_35": {
+      "surface": "river",
+      "boundaryVertexCount": 332,
+      "holeCount": 0,
+      "spacing": 0.2,
+      "generateMeshMs": 479,
+      "vertexCount": 12495,
+      "triangleCount": 24656,
+      "surfaceArea": 776.7420523422188,
+      "conformMs": 24,
+      "digMs": 109,
+      "smoothMs": 40,
+      "heightStats": {
+        "min": 0.00000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.10579119891934693
+      },
+      "blendMapMs": 102,
+      "totalMs": 754
+    },
+    "concrete_37": {
+      "surface": "concrete",
+      "boundaryVertexCount": 554,
+      "holeCount": 0,
+      "spacing": 0.2,
+      "generateMeshMs": 1872,
+      "vertexCount": 13426,
+      "triangleCount": 26296,
+      "surfaceArea": 848.0551280006766,
+      "conformMs": 25,
+      "digMs": 181,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.7000076174736023,
+        "mean": 0.6812108429386029
+      },
+      "totalMs": 2078
+    },
+    "concrete_38": {
+      "surface": "concrete",
+      "boundaryVertexCount": 529,
+      "holeCount": 0,
+      "spacing": 0.2,
+      "generateMeshMs": 1851,
+      "vertexCount": 12321,
+      "triangleCount": 24111,
+      "surfaceArea": 777.4016256202012,
+      "conformMs": 24,
+      "digMs": 160,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.7000076174736023,
+        "mean": 0.6810355745500853
+      },
+      "totalMs": 2035
+    },
+    "concrete_39": {
+      "surface": "concrete",
+      "boundaryVertexCount": 467,
+      "holeCount": 0,
+      "spacing": 0.2,
+      "generateMeshMs": 422,
+      "vertexCount": 10589,
+      "triangleCount": 20709,
+      "surfaceArea": 661.7481403481215,
+      "conformMs": 21,
+      "digMs": 123,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.7000076174736023,
+        "mean": 0.6791045017176686
+      },
+      "totalMs": 566
+    },
+    "fairway_40": {
+      "surface": "fairway",
+      "boundaryVertexCount": 500,
+      "holeCount": 1,
+      "spacing": 1,
+      "generateMeshMs": 39,
+      "vertexCount": 2364,
+      "triangleCount": 2542,
+      "surfaceArea": 331.53681900934316,
+      "conformMs": 5,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 44
+    },
+    "concrete_41": {
+      "surface": "concrete",
+      "boundaryVertexCount": 423,
+      "holeCount": 0,
+      "spacing": 0.2,
+      "generateMeshMs": 332,
+      "vertexCount": 9973,
+      "triangleCount": 19521,
+      "surfaceArea": 620.4944547973573,
+      "conformMs": 21,
+      "digMs": 107,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.7000076174736023,
+        "mean": 0.6792286506964285
+      },
+      "totalMs": 460
+    },
+    "concrete_42": {
+      "surface": "concrete",
+      "boundaryVertexCount": 737,
+      "holeCount": 0,
+      "spacing": 0.2,
+      "generateMeshMs": 440,
+      "vertexCount": 9066,
+      "triangleCount": 17393,
+      "surfaceArea": 544.4581288956106,
+      "conformMs": 19,
+      "digMs": 152,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.7000076174736023,
+        "mean": 0.6703490646777499
+      },
+      "totalMs": 611
+    },
+    "rough_44": {
+      "surface": "rough",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 1.5,
+      "generateMeshMs": 17,
+      "vertexCount": 643,
+      "triangleCount": 784,
+      "surfaceArea": 558.4163709696063,
+      "conformMs": 3,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 20
+    },
+    "sand_45": {
+      "surface": "sand",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 3225,
+      "vertexCount": 34771,
+      "triangleCount": 69040,
+      "surfaceArea": 548.0182552203187,
+      "conformMs": 79,
+      "digMs": 527,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.3469224543785885
+      },
+      "blendMapMs": 207,
+      "totalMs": 4038
+    },
+    "green_47": {
+      "surface": "green",
+      "boundaryVertexCount": 498,
+      "holeCount": 0,
+      "spacing": 0.5,
+      "generateMeshMs": 60,
+      "vertexCount": 1766,
+      "triangleCount": 3032,
+      "surfaceArea": 524.461126082344,
+      "conformMs": 6,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 66
+    },
+    "green_48": {
+      "surface": "green",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.5,
+      "generateMeshMs": 47,
+      "vertexCount": 1728,
+      "triangleCount": 2954,
+      "surfaceArea": 509.0410783076659,
+      "conformMs": 7,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 54
+    },
+    "concrete_49": {
+      "surface": "concrete",
+      "boundaryVertexCount": 454,
+      "holeCount": 0,
+      "spacing": 0.2,
+      "generateMeshMs": 338,
+      "vertexCount": 8080,
+      "triangleCount": 15704,
+      "surfaceArea": 497.3185591227375,
+      "conformMs": 28,
+      "digMs": 104,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.7000076174736023,
+        "mean": 0.6765375187934035
+      },
+      "totalMs": 470
+    },
+    "concrete_50": {
+      "surface": "concrete",
+      "boundaryVertexCount": 450,
+      "holeCount": 1,
+      "spacing": 0.2,
+      "generateMeshMs": 333,
+      "vertexCount": 7849,
+      "triangleCount": 14748,
+      "surfaceArea": 449.1519684093073,
+      "conformMs": 22,
+      "digMs": 180,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.7000076174736023,
+        "mean": 0.661486100202792
+      },
+      "totalMs": 535
+    },
+    "green_52": {
+      "surface": "green",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.5,
+      "generateMeshMs": 46,
+      "vertexCount": 1552,
+      "triangleCount": 2602,
+      "surfaceArea": 439.5827128123492,
+      "conformMs": 6,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 52
+    },
+    "green_54": {
+      "surface": "green",
+      "boundaryVertexCount": 484,
+      "holeCount": 0,
+      "spacing": 0.5,
+      "generateMeshMs": 36,
+      "vertexCount": 1474,
+      "triangleCount": 2462,
+      "surfaceArea": 408.04497785438434,
+      "conformMs": 5,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 41
+    },
+    "concrete_55": {
+      "surface": "concrete",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.2,
+      "generateMeshMs": 860,
+      "vertexCount": 6758,
+      "triangleCount": 13014,
+      "surfaceArea": 417.55573077732697,
+      "conformMs": 25,
+      "digMs": 84,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.7000076174736023,
+        "mean": 0.6760341195479481
+      },
+      "totalMs": 969
+    },
+    "green_57": {
+      "surface": "green",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.5,
+      "generateMeshMs": 36,
+      "vertexCount": 1466,
+      "triangleCount": 2430,
+      "surfaceArea": 398.91525118309073,
+      "conformMs": 5,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 41
+    },
+    "water_58": {
+      "surface": "water",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 2.5,
+      "generateMeshMs": 22,
+      "vertexCount": 529,
+      "triangleCount": 556,
+      "surfaceArea": 391.70988211780787,
+      "conformMs": 2,
+      "digMs": 5,
+      "smoothMs": 1,
+      "heightStats": {
+        "min": -2.6429781913757324,
+        "max": 0.5000076293945312,
+        "mean": 0.4239269681486155
+      },
+      "blendMapMs": 159,
+      "totalMs": 189
+    },
+    "concrete_59": {
+      "surface": "concrete",
+      "boundaryVertexCount": 451,
+      "holeCount": 0,
+      "spacing": 0.2,
+      "generateMeshMs": 227,
+      "vertexCount": 6560,
+      "triangleCount": 12667,
+      "surfaceArea": 401.7795570977032,
+      "conformMs": 16,
+      "digMs": 82,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.7000076174736023,
+        "mean": 0.674004084680502
+      },
+      "totalMs": 325
+    },
+    "green_61": {
+      "surface": "green",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.5,
+      "generateMeshMs": 36,
+      "vertexCount": 1418,
+      "triangleCount": 2334,
+      "surfaceArea": 379.6506853727624,
+      "conformMs": 5,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 41
+    },
+    "concrete_62": {
+      "surface": "concrete",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.2,
+      "generateMeshMs": 511,
+      "vertexCount": 6194,
+      "triangleCount": 11886,
+      "surfaceArea": 382.6999246440828,
+      "conformMs": 19,
+      "digMs": 78,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.7000076174736023,
+        "mean": 0.6708270410472129
+      },
+      "totalMs": 608
+    },
+    "green_64": {
+      "surface": "green",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.5,
+      "generateMeshMs": 35,
+      "vertexCount": 1391,
+      "triangleCount": 2280,
+      "surfaceArea": 370.4983031274751,
+      "conformMs": 4,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 39
+    },
+    "green_66": {
+      "surface": "green",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.5,
+      "generateMeshMs": 35,
+      "vertexCount": 1377,
+      "triangleCount": 2252,
+      "surfaceArea": 364.1442630533129,
+      "conformMs": 4,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 39
+    },
+    "concrete_67": {
+      "surface": "concrete",
+      "boundaryVertexCount": 506,
+      "holeCount": 0,
+      "spacing": 0.2,
+      "generateMeshMs": 206,
+      "vertexCount": 5732,
+      "triangleCount": 10956,
+      "surfaceArea": 347.1911266213283,
+      "conformMs": 12,
+      "digMs": 70,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.7000076174736023,
+        "mean": 0.6566829837791086
+      },
+      "totalMs": 288
+    },
+    "sand_68": {
+      "surface": "sand",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 1401,
+      "vertexCount": 21500,
+      "triangleCount": 42498,
+      "surfaceArea": 336.5931589029515,
+      "conformMs": 39,
+      "digMs": 258,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.3519340585539507
+      },
+      "blendMapMs": 142,
+      "totalMs": 1840
+    },
+    "green_70": {
+      "surface": "green",
+      "boundaryVertexCount": 486,
+      "holeCount": 0,
+      "spacing": 0.5,
+      "generateMeshMs": 37,
+      "vertexCount": 1277,
+      "triangleCount": 2066,
+      "surfaceArea": 325.7922021304257,
+      "conformMs": 4,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 41
+    },
+    "sand_71": {
+      "surface": "sand",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 1176,
+      "vertexCount": 19259,
+      "triangleCount": 38016,
+      "surfaceArea": 302.2341344509041,
+      "conformMs": 36,
+      "digMs": 237,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.3582230698044745
+      },
+      "blendMapMs": 111,
+      "totalMs": 1560
+    },
+    "concrete_72": {
+      "surface": "concrete",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.2,
+      "generateMeshMs": 161,
+      "vertexCount": 5018,
+      "triangleCount": 9534,
+      "surfaceArea": 294.1462878771126,
+      "conformMs": 12,
+      "digMs": 60,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.7000076174736023,
+        "mean": 0.6681654142307162
+      },
+      "totalMs": 233
+    },
+    "tee_73": {
+      "surface": "tee",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.3,
+      "generateMeshMs": 56,
+      "vertexCount": 2350,
+      "triangleCount": 4198,
+      "surfaceArea": 272.43814815580845,
+      "conformMs": 7,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 63
+    },
+    "green_75": {
+      "surface": "green",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.5,
+      "generateMeshMs": 35,
+      "vertexCount": 1158,
+      "triangleCount": 1814,
+      "surfaceArea": 276.6688229069114,
+      "conformMs": 4,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 39
+    },
+    "green_77": {
+      "surface": "green",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.5,
+      "generateMeshMs": 31,
+      "vertexCount": 1164,
+      "triangleCount": 1826,
+      "surfaceArea": 275.423646312207,
+      "conformMs": 4,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 35
+    },
+    "fairway_78": {
+      "surface": "fairway",
+      "boundaryVertexCount": 303,
+      "holeCount": 0,
+      "spacing": 1,
+      "generateMeshMs": 13,
+      "vertexCount": 464,
+      "triangleCount": 623,
+      "surfaceArea": 260.38909208590985,
+      "conformMs": 2,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 15
+    },
+    "concrete_79": {
+      "surface": "concrete",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.2,
+      "generateMeshMs": 125,
+      "vertexCount": 4299,
+      "triangleCount": 8096,
+      "surfaceArea": 251.76176208257675,
+      "conformMs": 9,
+      "digMs": 53,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.7000076174736023,
+        "mean": 0.656975718896648
+      },
+      "totalMs": 187
+    },
+    "concrete_80": {
+      "surface": "concrete",
+      "boundaryVertexCount": 500,
+      "holeCount": 1,
+      "spacing": 0.2,
+      "generateMeshMs": 169,
+      "vertexCount": 4436,
+      "triangleCount": 7872,
+      "surfaceArea": 234.62046312727034,
+      "conformMs": 10,
+      "digMs": 99,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.7000076174736023,
+        "mean": 0.6433631091154406
+      },
+      "totalMs": 278
+    },
+    "sand_81": {
+      "surface": "sand",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 869,
+      "vertexCount": 15957,
+      "triangleCount": 31412,
+      "surfaceArea": 248.62167735095136,
+      "conformMs": 29,
+      "digMs": 191,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.3463330209692252
+      },
+      "blendMapMs": 77,
+      "totalMs": 1166
+    },
+    "tee_82": {
+      "surface": "tee",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.3,
+      "generateMeshMs": 68,
+      "vertexCount": 2113,
+      "triangleCount": 3724,
+      "surfaceArea": 243.14774602465332,
+      "conformMs": 5,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 73
+    },
+    "concrete_83": {
+      "surface": "concrete",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.2,
+      "generateMeshMs": 119,
+      "vertexCount": 3908,
+      "triangleCount": 7314,
+      "surfaceArea": 224.23845497332513,
+      "conformMs": 10,
+      "digMs": 50,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.7000076174736023,
+        "mean": 0.6592913666547504
+      },
+      "totalMs": 179
+    },
+    "tee_84": {
+      "surface": "tee",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.3,
+      "generateMeshMs": 54,
+      "vertexCount": 1973,
+      "triangleCount": 3444,
+      "surfaceArea": 221.60584888421,
+      "conformMs": 5,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 59
+    },
+    "green_86": {
+      "surface": "green",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.5,
+      "generateMeshMs": 31,
+      "vertexCount": 1021,
+      "triangleCount": 1540,
+      "surfaceArea": 218.32460741186514,
+      "conformMs": 5,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 36
+    },
+    "concrete_87": {
+      "surface": "concrete",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.2,
+      "generateMeshMs": 217,
+      "vertexCount": 3742,
+      "triangleCount": 6982,
+      "surfaceArea": 221.62013189774007,
+      "conformMs": 12,
+      "digMs": 45,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.7000076174736023,
+        "mean": 0.6677937674719914
+      },
+      "totalMs": 274
+    },
+    "green_89": {
+      "surface": "green",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.5,
+      "generateMeshMs": 26,
+      "vertexCount": 971,
+      "triangleCount": 1440,
+      "surfaceArea": 191.77370710670948,
+      "conformMs": 5,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 31
+    },
+    "sand_90": {
+      "surface": "sand",
+      "boundaryVertexCount": 440,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 588,
+      "vertexCount": 12030,
+      "triangleCount": 23618,
+      "surfaceArea": 186.77939843712375,
+      "conformMs": 27,
+      "digMs": 133,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.3394157881352273
+      },
+      "blendMapMs": 60,
+      "totalMs": 808
+    },
+    "concrete_91": {
+      "surface": "concrete",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.2,
+      "generateMeshMs": 135,
+      "vertexCount": 3233,
+      "triangleCount": 5964,
+      "surfaceArea": 188.8814523825422,
+      "conformMs": 8,
+      "digMs": 39,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.7000076174736023,
+        "mean": 0.6666657192914286
+      },
+      "totalMs": 182
+    },
+    "tee_92": {
+      "surface": "tee",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.3,
+      "generateMeshMs": 46,
+      "vertexCount": 1673,
+      "triangleCount": 2844,
+      "surfaceArea": 176.20534059219062,
+      "conformMs": 4,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 50
+    },
+    "concrete_93": {
+      "surface": "concrete",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.2,
+      "generateMeshMs": 145,
+      "vertexCount": 3072,
+      "triangleCount": 5642,
+      "surfaceArea": 177.2017406458035,
+      "conformMs": 7,
+      "digMs": 49,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.7000076174736023,
+        "mean": 0.663180863930999
+      },
+      "totalMs": 201
+    },
+    "sand_94": {
+      "surface": "sand",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 568,
+      "vertexCount": 10444,
+      "triangleCount": 20386,
+      "surfaceArea": 160.92886244435795,
+      "conformMs": 29,
+      "digMs": 145,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.33148852489783087
+      },
+      "blendMapMs": 110,
+      "totalMs": 852
+    },
+    "tee_95": {
+      "surface": "tee",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.3,
+      "generateMeshMs": 42,
+      "vertexCount": 1524,
+      "triangleCount": 2546,
+      "surfaceArea": 152.98097785003483,
+      "conformMs": 5,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 47
+    },
+    "tee_96": {
+      "surface": "tee",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.3,
+      "generateMeshMs": 40,
+      "vertexCount": 1509,
+      "triangleCount": 2516,
+      "surfaceArea": 149.21230657864362,
+      "conformMs": 4,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 44
+    },
+    "fairway_97": {
+      "surface": "fairway",
+      "boundaryVertexCount": 266,
+      "holeCount": 0,
+      "spacing": 1,
+      "generateMeshMs": 12,
+      "vertexCount": 353,
+      "triangleCount": 438,
+      "surfaceArea": 147.93766560587088,
+      "conformMs": 2,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 14
+    },
+    "concrete_98": {
+      "surface": "concrete",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.2,
+      "generateMeshMs": 172,
+      "vertexCount": 2690,
+      "triangleCount": 4878,
+      "surfaceArea": 151.16620413772762,
+      "conformMs": 9,
+      "digMs": 34,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.7000076174736023,
+        "mean": 0.6611847854015109
+      },
+      "totalMs": 215
+    },
+    "tee_99": {
+      "surface": "tee",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.3,
+      "generateMeshMs": 41,
+      "vertexCount": 1434,
+      "triangleCount": 2366,
+      "surfaceArea": 139.7591100288555,
+      "conformMs": 4,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 45
+    },
+    "concrete_100": {
+      "surface": "concrete",
+      "boundaryVertexCount": 713,
+      "holeCount": 0,
+      "spacing": 0.2,
+      "generateMeshMs": 158,
+      "vertexCount": 2707,
+      "triangleCount": 4699,
+      "surfaceArea": 138.6579639450647,
+      "conformMs": 7,
+      "digMs": 46,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.7000076174736023,
+        "mean": 0.6451890705959094
+      },
+      "totalMs": 211
+    },
+    "sand_101": {
+      "surface": "sand",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 378,
+      "vertexCount": 9027,
+      "triangleCount": 17552,
+      "surfaceArea": 136.989910537377,
+      "conformMs": 18,
+      "digMs": 108,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.3506392371658472
+      },
+      "blendMapMs": 48,
+      "totalMs": 552
+    },
+    "sand_102": {
+      "surface": "sand",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 372,
+      "vertexCount": 8628,
+      "triangleCount": 16754,
+      "surfaceArea": 131.69603277690476,
+      "conformMs": 20,
+      "digMs": 102,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.36334444057778403
+      },
+      "blendMapMs": 58,
+      "totalMs": 552
+    },
+    "tee_103": {
+      "surface": "tee",
+      "boundaryVertexCount": 434,
+      "holeCount": 0,
+      "spacing": 0.3,
+      "generateMeshMs": 35,
+      "vertexCount": 1282,
+      "triangleCount": 2128,
+      "surfaceArea": 128.31668131100014,
+      "conformMs": 4,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 39
+    },
+    "tee_104": {
+      "surface": "tee",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.3,
+      "generateMeshMs": 34,
+      "vertexCount": 1286,
+      "triangleCount": 2070,
+      "surfaceArea": 118.60063286032528,
+      "conformMs": 4,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 38
+    },
+    "tee_105": {
+      "surface": "tee",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.3,
+      "generateMeshMs": 35,
+      "vertexCount": 1300,
+      "triangleCount": 2098,
+      "surfaceArea": 124.12807207251899,
+      "conformMs": 4,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 39
+    },
+    "tee_106": {
+      "surface": "tee",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.3,
+      "generateMeshMs": 33,
+      "vertexCount": 1271,
+      "triangleCount": 2040,
+      "surfaceArea": 116.21521822619252,
+      "conformMs": 4,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 37
+    },
+    "tee_107": {
+      "surface": "tee",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.3,
+      "generateMeshMs": 35,
+      "vertexCount": 1249,
+      "triangleCount": 1996,
+      "surfaceArea": 115.7923809082713,
+      "conformMs": 4,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 39
+    },
+    "tee_108": {
+      "surface": "tee",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.3,
+      "generateMeshMs": 33,
+      "vertexCount": 1196,
+      "triangleCount": 1890,
+      "surfaceArea": 103.38142822682858,
+      "conformMs": 4,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 37
+    },
+    "tee_109": {
+      "surface": "tee",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.3,
+      "generateMeshMs": 33,
+      "vertexCount": 1173,
+      "triangleCount": 1844,
+      "surfaceArea": 101.94042334705591,
+      "conformMs": 4,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 37
+    },
+    "concrete_110": {
+      "surface": "concrete",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.2,
+      "generateMeshMs": 72,
+      "vertexCount": 1911,
+      "triangleCount": 3320,
+      "surfaceArea": 98.25405600573868,
+      "conformMs": 5,
+      "digMs": 23,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.7000076174736023,
+        "mean": 0.6470960522745992
+      },
+      "totalMs": 100
+    },
+    "tee_111": {
+      "surface": "tee",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.3,
+      "generateMeshMs": 28,
+      "vertexCount": 1068,
+      "triangleCount": 1634,
+      "surfaceArea": 85.60342975519598,
+      "conformMs": 3,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 31
+    },
+    "sand_112": {
+      "surface": "sand",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 223,
+      "vertexCount": 5760,
+      "triangleCount": 11018,
+      "surfaceArea": 85.13101313076913,
+      "conformMs": 12,
+      "digMs": 67,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.3479753290251311
+      },
+      "blendMapMs": 44,
+      "totalMs": 346
+    },
+    "tee_113": {
+      "surface": "tee",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.3,
+      "generateMeshMs": 30,
+      "vertexCount": 1064,
+      "triangleCount": 1626,
+      "surfaceArea": 85.40461762645282,
+      "conformMs": 3,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 33
+    },
+    "sand_114": {
+      "surface": "sand",
+      "boundaryVertexCount": 499,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 241,
+      "vertexCount": 5741,
+      "triangleCount": 10981,
+      "surfaceArea": 85.98781904302768,
+      "conformMs": 13,
+      "digMs": 67,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.35154552275742873
+      },
+      "blendMapMs": 51,
+      "totalMs": 372
+    },
+    "sand_115": {
+      "surface": "sand",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 221,
+      "vertexCount": 5547,
+      "triangleCount": 10592,
+      "surfaceArea": 81.90359983034432,
+      "conformMs": 12,
+      "digMs": 69,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.33912541354499853
+      },
+      "blendMapMs": 46,
+      "totalMs": 348
+    },
+    "tee_116": {
+      "surface": "tee",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.3,
+      "generateMeshMs": 28,
+      "vertexCount": 1017,
+      "triangleCount": 1532,
+      "surfaceArea": 79.67547039315104,
+      "conformMs": 4,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 32
+    },
+    "tee_117": {
+      "surface": "tee",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.3,
+      "generateMeshMs": 27,
+      "vertexCount": 1023,
+      "triangleCount": 1544,
+      "surfaceArea": 79.06944426501286,
+      "conformMs": 4,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 31
+    },
+    "tee_118": {
+      "surface": "tee",
+      "boundaryVertexCount": 498,
+      "holeCount": 0,
+      "spacing": 0.3,
+      "generateMeshMs": 26,
+      "vertexCount": 1007,
+      "triangleCount": 1514,
+      "surfaceArea": 76.63452380981312,
+      "conformMs": 4,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 30
+    },
+    "tee_119": {
+      "surface": "tee",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.3,
+      "generateMeshMs": 26,
+      "vertexCount": 1000,
+      "triangleCount": 1498,
+      "surfaceArea": 75.59376890864223,
+      "conformMs": 4,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 30
+    },
+    "sand_120": {
+      "surface": "sand",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 173,
+      "vertexCount": 4698,
+      "triangleCount": 8894,
+      "surfaceArea": 67.87921725027263,
+      "conformMs": 11,
+      "digMs": 57,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.35433218847974507
+      },
+      "blendMapMs": 45,
+      "totalMs": 286
+    },
+    "tee_121": {
+      "surface": "tee",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.3,
+      "generateMeshMs": 25,
+      "vertexCount": 958,
+      "triangleCount": 1414,
+      "surfaceArea": 69.2883458507713,
+      "conformMs": 4,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 29
+    },
+    "sand_122": {
+      "surface": "sand",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 186,
+      "vertexCount": 4534,
+      "triangleCount": 8566,
+      "surfaceArea": 66.53508206550032,
+      "conformMs": 10,
+      "digMs": 54,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.34246996168029115
+      },
+      "blendMapMs": 53,
+      "totalMs": 303
+    },
+    "sand_123": {
+      "surface": "sand",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 175,
+      "vertexCount": 4533,
+      "triangleCount": 8564,
+      "surfaceArea": 66.11967977695167,
+      "conformMs": 11,
+      "digMs": 54,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.3529542048338257
+      },
+      "blendMapMs": 45,
+      "totalMs": 285
+    },
+    "sand_124": {
+      "surface": "sand",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 160,
+      "vertexCount": 4435,
+      "triangleCount": 8368,
+      "surfaceArea": 64.005057846196,
+      "conformMs": 9,
+      "digMs": 52,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.36085994327619353
+      },
+      "blendMapMs": 45,
+      "totalMs": 266
+    },
+    "tee_125": {
+      "surface": "tee",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.3,
+      "generateMeshMs": 31,
+      "vertexCount": 920,
+      "triangleCount": 1338,
+      "surfaceArea": 64.66201274620835,
+      "conformMs": 4,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 35
+    },
+    "tee_126": {
+      "surface": "tee",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.3,
+      "generateMeshMs": 26,
+      "vertexCount": 917,
+      "triangleCount": 1332,
+      "surfaceArea": 63.2628581719473,
+      "conformMs": 4,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 30
+    },
+    "sand_127": {
+      "surface": "sand",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 149,
+      "vertexCount": 4087,
+      "triangleCount": 7672,
+      "surfaceArea": 58.52482488146052,
+      "conformMs": 9,
+      "digMs": 47,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.34885192406711296
+      },
+      "blendMapMs": 44,
+      "totalMs": 249
+    },
+    "tee_128": {
+      "surface": "tee",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.3,
+      "generateMeshMs": 25,
+      "vertexCount": 865,
+      "triangleCount": 1228,
+      "surfaceArea": 56.40884422487579,
+      "conformMs": 3,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 28
+    },
+    "concrete_129": {
+      "surface": "concrete",
+      "boundaryVertexCount": 305,
+      "holeCount": 0,
+      "spacing": 0.2,
+      "generateMeshMs": 29,
+      "vertexCount": 1152,
+      "triangleCount": 1997,
+      "surfaceArea": 57.19986576959491,
+      "conformMs": 5,
+      "digMs": 11,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.7000076174736023,
+        "mean": 0.6360033417327536
+      },
+      "totalMs": 45
+    },
+    "sand_130": {
+      "surface": "sand",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 134,
+      "vertexCount": 3809,
+      "triangleCount": 7116,
+      "surfaceArea": 54.0464152097702,
+      "conformMs": 9,
+      "digMs": 43,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.36606179555278023
+      },
+      "blendMapMs": 47,
+      "totalMs": 233
+    },
+    "sand_131": {
+      "surface": "sand",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 146,
+      "vertexCount": 3824,
+      "triangleCount": 7146,
+      "surfaceArea": 54.55385278046015,
+      "conformMs": 10,
+      "digMs": 46,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.3599546482654047
+      },
+      "blendMapMs": 46,
+      "totalMs": 248
+    },
+    "tee_132": {
+      "surface": "tee",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.3,
+      "generateMeshMs": 26,
+      "vertexCount": 852,
+      "triangleCount": 1202,
+      "surfaceArea": 53.99031898914836,
+      "conformMs": 3,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 29
+    },
+    "sand_133": {
+      "surface": "sand",
+      "boundaryVertexCount": 491,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 135,
+      "vertexCount": 3775,
+      "triangleCount": 7057,
+      "surfaceArea": 53.34246957837604,
+      "conformMs": 9,
+      "digMs": 43,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.36290971643087877
+      },
+      "blendMapMs": 42,
+      "totalMs": 229
+    },
+    "sand_134": {
+      "surface": "sand",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 135,
+      "vertexCount": 3748,
+      "triangleCount": 6994,
+      "surfaceArea": 52.724793187342584,
+      "conformMs": 8,
+      "digMs": 43,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.35966550195420693
+      },
+      "blendMapMs": 46,
+      "totalMs": 232
+    },
+    "tee_135": {
+      "surface": "tee",
+      "boundaryVertexCount": 212,
+      "holeCount": 0,
+      "spacing": 0.3,
+      "generateMeshMs": 16,
+      "vertexCount": 559,
+      "triangleCount": 904,
+      "surfaceArea": 50.75073639160489,
+      "conformMs": 3,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 19
+    },
+    "tee_136": {
+      "surface": "tee",
+      "boundaryVertexCount": 179,
+      "holeCount": 0,
+      "spacing": 0.3,
+      "generateMeshMs": 17,
+      "vertexCount": 536,
+      "triangleCount": 847,
+      "surfaceArea": 49.43068046225494,
+      "conformMs": 2,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 19
+    },
+    "tee_137": {
+      "surface": "tee",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.3,
+      "generateMeshMs": 23,
+      "vertexCount": 809,
+      "triangleCount": 1116,
+      "surfaceArea": 48.17846965487115,
+      "conformMs": 4,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 27
+    },
+    "sand_139": {
+      "surface": "sand",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 111,
+      "vertexCount": 3154,
+      "triangleCount": 5806,
+      "surfaceArea": 43.35220719128847,
+      "conformMs": 9,
+      "digMs": 36,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.37201186443856793
+      },
+      "blendMapMs": 43,
+      "totalMs": 199
+    },
+    "sand_140": {
+      "surface": "sand",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 109,
+      "vertexCount": 2895,
+      "triangleCount": 5288,
+      "surfaceArea": 39.57137135416269,
+      "conformMs": 6,
+      "digMs": 34,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.37188538240851104
+      },
+      "blendMapMs": 43,
+      "totalMs": 192
+    },
+    "tee_141": {
+      "surface": "tee",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.3,
+      "generateMeshMs": 21,
+      "vertexCount": 761,
+      "triangleCount": 1020,
+      "surfaceArea": 40.62324715545401,
+      "conformMs": 3,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 24
+    },
+    "concrete_142": {
+      "surface": "concrete",
+      "boundaryVertexCount": 507,
+      "holeCount": 0,
+      "spacing": 0.2,
+      "generateMeshMs": 31,
+      "vertexCount": 984,
+      "triangleCount": 1459,
+      "surfaceArea": 33.20654793456197,
+      "conformMs": 5,
+      "digMs": 13,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.7000076174736023,
+        "mean": 0.5963370240921897
+      },
+      "totalMs": 49
+    },
+    "tee_143": {
+      "surface": "tee",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.3,
+      "generateMeshMs": 23,
+      "vertexCount": 759,
+      "triangleCount": 1016,
+      "surfaceArea": 39.39897752960678,
+      "conformMs": 5,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 28
+    },
+    "concrete_144": {
+      "surface": "concrete",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.2,
+      "generateMeshMs": 27,
+      "vertexCount": 995,
+      "triangleCount": 1488,
+      "surfaceArea": 34.29920163471252,
+      "conformMs": 3,
+      "digMs": 12,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.7000076174736023,
+        "mean": 0.5978477530143967
+      },
+      "totalMs": 42
+    },
+    "rough_145": {
+      "surface": "rough",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 1.5,
+      "generateMeshMs": 14,
+      "vertexCount": 503,
+      "triangleCount": 504,
+      "surfaceArea": 30.04277776181698,
+      "conformMs": 2,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 16
+    },
+    "sand_146": {
+      "surface": "sand",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 83,
+      "vertexCount": 2388,
+      "triangleCount": 4274,
+      "surfaceArea": 31.036441871896386,
+      "conformMs": 6,
+      "digMs": 28,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.37111940252371567
+      },
+      "blendMapMs": 43,
+      "totalMs": 160
+    },
+    "sand_147": {
+      "surface": "sand",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 76,
+      "vertexCount": 2177,
+      "triangleCount": 3852,
+      "surfaceArea": 27.814342999830842,
+      "conformMs": 6,
+      "digMs": 25,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.38131343126023204
+      },
+      "blendMapMs": 45,
+      "totalMs": 152
+    },
+    "sand_148": {
+      "surface": "sand",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 78,
+      "vertexCount": 2160,
+      "triangleCount": 3818,
+      "surfaceArea": 27.110861974884756,
+      "conformMs": 6,
+      "digMs": 25,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.37769930652446215
+      },
+      "blendMapMs": 44,
+      "totalMs": 153
+    },
+    "sand_149": {
+      "surface": "sand",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 71,
+      "vertexCount": 2082,
+      "triangleCount": 3662,
+      "surfaceArea": 26.210832318727626,
+      "conformMs": 5,
+      "digMs": 24,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.3816350685588221
+      },
+      "blendMapMs": 43,
+      "totalMs": 143
+    },
+    "rough_150": {
+      "surface": "rough",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 1.5,
+      "generateMeshMs": 13,
+      "vertexCount": 502,
+      "triangleCount": 502,
+      "surfaceArea": 24.898315155878663,
+      "conformMs": 2,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 15
+    },
+    "tee_151": {
+      "surface": "tee",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.3,
+      "generateMeshMs": 17,
+      "vertexCount": 658,
+      "triangleCount": 814,
+      "surfaceArea": 25.093007203759043,
+      "conformMs": 3,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 20
+    },
+    "sand_152": {
+      "surface": "sand",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 60,
+      "vertexCount": 1696,
+      "triangleCount": 2890,
+      "surfaceArea": 19.76421088259667,
+      "conformMs": 5,
+      "digMs": 19,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.37736160585762196
+      },
+      "blendMapMs": 44,
+      "totalMs": 128
+    },
+    "concrete_153": {
+      "surface": "concrete",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.2,
+      "generateMeshMs": 20,
+      "vertexCount": 781,
+      "triangleCount": 1060,
+      "surfaceArea": 19.21616295259446,
+      "conformMs": 4,
+      "digMs": 9,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.7000076174736023,
+        "mean": 0.5715715949269782
+      },
+      "totalMs": 33
+    },
+    "sand_154": {
+      "surface": "sand",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 55,
+      "vertexCount": 1532,
+      "triangleCount": 2562,
+      "surfaceArea": 17.186807587742805,
+      "conformMs": 5,
+      "digMs": 18,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.38408649765324654
+      },
+      "blendMapMs": 43,
+      "totalMs": 121
+    },
+    "sand_155": {
+      "surface": "sand",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 52,
+      "vertexCount": 1461,
+      "triangleCount": 2420,
+      "surfaceArea": 15.860879245214164,
+      "conformMs": 4,
+      "digMs": 17,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.3904884680340667
+      },
+      "blendMapMs": 44,
+      "totalMs": 117
+    },
+    "sand_156": {
+      "surface": "sand",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 48,
+      "vertexCount": 1365,
+      "triangleCount": 2228,
+      "surfaceArea": 14.465830378234386,
+      "conformMs": 7,
+      "digMs": 16,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.39592757530701467
+      },
+      "blendMapMs": 43,
+      "totalMs": 114
+    },
+    "sand_157": {
+      "surface": "sand",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 51,
+      "vertexCount": 1403,
+      "triangleCount": 2304,
+      "surfaceArea": 14.888524028239772,
+      "conformMs": 5,
+      "digMs": 15,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.3965149590014052
+      },
+      "blendMapMs": 44,
+      "totalMs": 115
+    },
+    "sand_158": {
+      "surface": "sand",
+      "boundaryVertexCount": 327,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 37,
+      "vertexCount": 1169,
+      "triangleCount": 2009,
+      "surfaceArea": 13.995255687701217,
+      "conformMs": 5,
+      "digMs": 9,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.3821968653193899
+      },
+      "blendMapMs": 29,
+      "totalMs": 80
+    },
+    "sand_159": {
+      "surface": "sand",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 49,
+      "vertexCount": 1299,
+      "triangleCount": 2096,
+      "surfaceArea": 13.137822492048144,
+      "conformMs": 4,
+      "digMs": 14,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.4030880454276689
+      },
+      "blendMapMs": 44,
+      "totalMs": 111
+    },
+    "sand_160": {
+      "surface": "sand",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 47,
+      "vertexCount": 1250,
+      "triangleCount": 1998,
+      "surfaceArea": 12.579237970523536,
+      "conformMs": 4,
+      "digMs": 13,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.39389976868629456
+      },
+      "blendMapMs": 42,
+      "totalMs": 106
+    },
+    "sand_161": {
+      "surface": "sand",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 45,
+      "vertexCount": 1250,
+      "triangleCount": 1998,
+      "surfaceArea": 12.372245369013399,
+      "conformMs": 4,
+      "digMs": 13,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.3981311357498169
+      },
+      "blendMapMs": 43,
+      "totalMs": 105
+    },
+    "sand_162": {
+      "surface": "sand",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 43,
+      "vertexCount": 1176,
+      "triangleCount": 1850,
+      "surfaceArea": 11.141146460548043,
+      "conformMs": 4,
+      "digMs": 13,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.4035636280618963
+      },
+      "blendMapMs": 45,
+      "totalMs": 105
+    },
+    "sand_163": {
+      "surface": "sand",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 40,
+      "vertexCount": 1088,
+      "triangleCount": 1674,
+      "surfaceArea": 10.095390008369577,
+      "conformMs": 4,
+      "digMs": 11,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.40863374311148243
+      },
+      "blendMapMs": 45,
+      "totalMs": 100
+    },
+    "sand_164": {
+      "surface": "sand",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 37,
+      "vertexCount": 1000,
+      "triangleCount": 1498,
+      "surfaceArea": 8.343593770638108,
+      "conformMs": 3,
+      "digMs": 10,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.4191369415521622
+      },
+      "blendMapMs": 46,
+      "totalMs": 96
+    },
+    "sand_165": {
+      "surface": "sand",
+      "boundaryVertexCount": 460,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 37,
+      "vertexCount": 997,
+      "triangleCount": 1532,
+      "surfaceArea": 9.087493200873723,
+      "conformMs": 4,
+      "digMs": 9,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.4075131150879855
+      },
+      "blendMapMs": 39,
+      "totalMs": 89
+    },
+    "sand_166": {
+      "surface": "sand",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 33,
+      "vertexCount": 934,
+      "triangleCount": 1366,
+      "surfaceArea": 7.346509521958069,
+      "conformMs": 4,
+      "digMs": 9,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.424467496334613
+      },
+      "blendMapMs": 43,
+      "totalMs": 89
+    },
+    "sand_167": {
+      "surface": "sand",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 30,
+      "vertexCount": 779,
+      "triangleCount": 1056,
+      "surfaceArea": 4.871925770043163,
+      "conformMs": 3,
+      "digMs": 7,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.4392000059567306
+      },
+      "blendMapMs": 44,
+      "totalMs": 84
+    },
+    "sand_168": {
+      "surface": "sand",
+      "boundaryVertexCount": 500,
+      "holeCount": 0,
+      "spacing": 0.1,
+      "generateMeshMs": 28,
+      "vertexCount": 744,
+      "triangleCount": 986,
+      "surfaceArea": 4.113813593205123,
+      "conformMs": 3,
+      "digMs": 8,
+      "heightStats": {
+        "min": 0.25000762939453125,
+        "max": 0.5000076293945312,
+        "mean": 0.4406702786443695
+      },
+      "blendMapMs": 46,
+      "totalMs": 85
+    },
+    "tee_169": {
+      "surface": "tee",
+      "boundaryVertexCount": 499,
+      "holeCount": 0,
+      "spacing": 0.3,
+      "generateMeshMs": 13,
+      "vertexCount": 504,
+      "triangleCount": 507,
+      "surfaceArea": 2.1189704980031316,
+      "conformMs": 4,
+      "heightStats": {
+        "min": 0.5000076293945312,
+        "max": 0.5000076293945312,
+        "mean": 0.5000076293945312
+      },
+      "totalMs": 17
+    }
+  }
+}
