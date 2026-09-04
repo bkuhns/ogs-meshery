@@ -157,6 +157,88 @@ class RingIndex {
     }
     return best;
   }
+
+  // Like distanceToEdge, but for callers that only care about distance up
+  // to some known `cap` (e.g. a blend width, or a dig-curve falloff
+  // distance) — anywhere beyond that, the caller treats every distance the
+  // same ("not in the blend zone", "curve already saturated to 1"). Search
+  // is bounded to the cap's own radius and, unlike distanceToEdge, never
+  // falls back to a full ring scan — a point farther than `cap` from every
+  // edge just returns `cap` directly. This is what keeps per-point cost
+  // bounded for shapes with many deep-interior points (a wide lake, not
+  // just a thin river ribbon), where distanceToEdge's brute-force fallback
+  // would otherwise run once per such point.
+  distanceToEdgeCapped(point, cap) {
+    const [px, py] = point;
+    const ring = this.ring;
+    const n = this.n;
+    const cx0 = Math.floor(px / this.cellSize);
+    const cy0 = Math.floor(py / this.cellSize);
+    const maxRadius = Math.ceil(cap / this.cellSize) + 1;
+
+    let best = Infinity;
+    const visitCell = (cx, cy) => {
+      const edgeEnds = this.grid.get(cellKey(cx, cy));
+      if (!edgeEnds) return;
+      for (const i of edgeEnds) {
+        const j = (i - 1 + n) % n;
+        const d = pointToSegmentDist(px, py, ring[j][0], ring[j][1], ring[i][0], ring[i][1]);
+        if (d < best) best = d;
+      }
+    };
+
+    for (let radius = 0; radius <= maxRadius; radius++) {
+      if (radius === 0) {
+        visitCell(cx0, cy0);
+      } else {
+        for (let dx = -radius; dx <= radius; dx++) {
+          visitCell(cx0 + dx, cy0 - radius);
+          visitCell(cx0 + dx, cy0 + radius);
+        }
+        for (let dy = -radius + 1; dy <= radius - 1; dy++) {
+          visitCell(cx0 - radius, cy0 + dy);
+          visitCell(cx0 + radius, cy0 + dy);
+        }
+      }
+      if (best !== Infinity && best <= radius * this.cellSize) break;
+      if (radius * this.cellSize >= cap) break;
+    }
+
+    return best === Infinity ? cap : Math.min(best, cap);
+  }
+
+  // A fixed-cost threshold check ("is any edge within `threshold`?"),
+  // unlike distanceToEdge's "what's the exact nearest distance?". For a
+  // small threshold this only ever needs to look at a small, constant
+  // number of grid cells around the point — no expanding search, no
+  // brute-force fallback — so unlike distanceToEdge it stays cheap even
+  // for a point deep inside a wide polygon (far from every edge), which
+  // distanceToEdge's capped-search-then-brute-force path handles far less
+  // gracefully at scale (many far points each paying the O(ring length)
+  // fallback). Correctness: the scanned cells span at least `threshold`
+  // in every direction from the point regardless of where in its own
+  // cell the point sits (+1 cell margin), so no closer edge can be missed.
+  isWithinDistance(point, threshold) {
+    const [px, py] = point;
+    const ring = this.ring;
+    const n = this.n;
+    const cx0 = Math.floor(px / this.cellSize);
+    const cy0 = Math.floor(py / this.cellSize);
+    const cellRadius = Math.ceil(threshold / this.cellSize) + 1;
+
+    for (let dx = -cellRadius; dx <= cellRadius; dx++) {
+      for (let dy = -cellRadius; dy <= cellRadius; dy++) {
+        const edgeEnds = this.grid.get(cellKey(cx0 + dx, cy0 + dy));
+        if (!edgeEnds) continue;
+        for (const i of edgeEnds) {
+          const j = (i - 1 + n) % n;
+          const d = pointToSegmentDist(px, py, ring[j][0], ring[j][1], ring[i][0], ring[i][1]);
+          if (d < threshold) return true;
+        }
+      }
+    }
+    return false;
+  }
 }
 
 export function buildRingIndex(ring, cellSize) {
@@ -171,6 +253,12 @@ export function buildPolygonIndex(polygon, holes, cellSize) {
   const holeIndexes = (holes || []).map(h => new RingIndex(h, cellSize));
 
   return {
+    // Exposed for callers that need outer-edge vs. hole-edge distance kept
+    // separate (e.g. edge-blend coloring, which treats "near the outer
+    // boundary" and "near a hole" as different visual zones) rather than
+    // the combined minimum distanceToBoundary() gives.
+    outer,
+    holes: holeIndexes,
     isInside(point) {
       if (!outer.containsPoint(point)) return false;
       for (const h of holeIndexes) {
@@ -185,6 +273,29 @@ export function buildPolygonIndex(polygon, holes, cellSize) {
         if (d < min) min = d;
       }
       return min;
+    },
+    // See RingIndex#distanceToEdgeCapped — bounded cost even for points
+    // deep inside a wide polygon, at the price of only being accurate up
+    // to `cap`.
+    distanceToBoundaryCapped(point, cap) {
+      let min = outer.distanceToEdgeCapped(point, cap);
+      for (const h of holeIndexes) {
+        const d = h.distanceToEdgeCapped(point, cap);
+        if (d < min) min = d;
+      }
+      return min;
+    },
+    // Prefer this over `distanceToBoundary(point) < threshold` when only a
+    // yes/no answer is needed — it's fixed-cost regardless of how far the
+    // point is from the boundary, where distanceToBoundary's exact-distance
+    // search can degrade to a full ring scan for points deep inside a wide
+    // polygon.
+    isWithinDistance(point, threshold) {
+      if (outer.isWithinDistance(point, threshold)) return true;
+      for (const h of holeIndexes) {
+        if (h.isWithinDistance(point, threshold)) return true;
+      }
+      return false;
     },
   };
 }
@@ -244,6 +355,48 @@ export class PointGrid {
     }
     return results;
   }
+}
+
+// A coarse, precomputed approximation of distanceToBoundary over a
+// polygon's bounding box, capped to at most `maxCells` grid cells.
+//
+// distanceToBoundary/distanceToEdge are exact but, for a point far from
+// every edge (deep inside a wide shape), fall back to an O(ring length)
+// scan — fine for occasional queries, not for computing this once per
+// point in a mesh with hundreds of thousands or millions of vertices.
+// Building this field pays that exact-distance cost at most `maxCells`
+// times (regardless of how many points will query it), and each query
+// afterward is a single array lookup. Distance values are only accurate to
+// within about one field cell — fine for a smooth visual falloff (a dig
+// depth curve, a blend gradient), not for anything needing exact geometry.
+export function buildDistanceField(polyIndex, bbox, maxCells = 250000) {
+  const width = Math.max(bbox.width, 1e-6);
+  const height = Math.max(bbox.height, 1e-6);
+  const aspect = width / height;
+  const fw = Math.max(1, Math.round(Math.sqrt(maxCells * aspect)));
+  const fh = Math.max(1, Math.round(maxCells / fw));
+  const cellW = width / fw;
+  const cellH = height / fh;
+
+  const field = new Float32Array(fw * fh);
+  for (let fy = 0; fy < fh; fy++) {
+    const py = bbox.minY + (fy + 0.5) * cellH;
+    for (let fx = 0; fx < fw; fx++) {
+      const px = bbox.minX + (fx + 0.5) * cellW;
+      const pt = [px, py];
+      field[fy * fw + fx] = polyIndex.isInside(pt) ? polyIndex.distanceToBoundary(pt) : 0;
+    }
+  }
+
+  return {
+    query(point) {
+      let fx = Math.floor((point[0] - bbox.minX) / cellW);
+      let fy = Math.floor((point[1] - bbox.minY) / cellH);
+      if (fx < 0) fx = 0; else if (fx >= fw) fx = fw - 1;
+      if (fy < 0) fy = 0; else if (fy >= fh) fy = fh - 1;
+      return field[fy * fw + fx];
+    },
+  };
 }
 
 export { pointToSegmentDist };

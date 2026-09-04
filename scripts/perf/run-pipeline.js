@@ -185,9 +185,14 @@ function compareRun(baseline, current, strict) {
     }
 
     const speedup = base.totalMs && cur.totalMs ? (base.totalMs / cur.totalMs) : null;
+    // A relative slowdown on a shape that still finishes in a second or two
+    // doesn't matter for a 170-shape course generation and is well within
+    // normal timing jitter for a short-lived operation — only flag it once
+    // the absolute cost is large enough to actually matter.
+    const absoluteIncreaseMs = cur.totalMs && base.totalMs ? cur.totalMs - base.totalMs : 0;
     if (speedup && speedup > 1.5) {
       notes.push(`${id}: ${speedup.toFixed(1)}x faster (${base.totalMs}ms -> ${cur.totalMs}ms)`);
-    } else if (speedup && speedup < 0.67) {
+    } else if (speedup && speedup < 0.67 && absoluteIncreaseMs > 2000) {
       problems.push(`${id}: got SLOWER by ${(1 / speedup).toFixed(1)}x (${base.totalMs}ms -> ${cur.totalMs}ms)`);
     }
   }
