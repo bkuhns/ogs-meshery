@@ -841,6 +841,19 @@ export async function updateHoleByNumber(holeNumber, update) {
   broadcast('project.opened', openProject); 
 }
 
+export async function updateHoles(updates) {
+  for (const { holeNumber, update } of updates) {
+    const existing = openProject.holes.get(holeNumber);
+    if (!update) {
+      openProject.holes.delete(holeNumber);
+    } else {
+      openProject.holes.set(holeNumber, _.merge(existing, update));
+    }
+  }
+  await saveProjectSettings();
+  broadcast('project.opened', openProject); 
+}
+
 export async function updateGameSettings(update) {
   // const updatedScene = _.merge({ ...openProject.scene }, update);
   const changed = !_.isEqual(update, openProject.gameSettings);

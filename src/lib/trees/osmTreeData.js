@@ -55,7 +55,11 @@ async function fetchTreeOverpassData(bbox) {
 
   if (!(response.status === 200 && response.headers.get('content-type')?.startsWith('application/json'))) {
     const body = await response.text();
-    throw { status: response.status, body };
+    let errorMessage = `Overpass API error (status ${response.status})`;
+    try {
+      if (body) errorMessage += `: ${body.substring(0, 150)}`;
+    } catch (e) {}
+    throw new Error(errorMessage);
   }
 
   const data = await response.json();

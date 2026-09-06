@@ -74,7 +74,11 @@ async function turboPassQuery(bbox, endpoint = '') {
       return data;
     } else {
       const body = await response.text();
-      throw { status: response.status, body };
+      let errorMessage = `Overpass API error (status ${response.status})`;
+      try {
+        if (body) errorMessage += `: ${body.substring(0, 150)}`;
+      } catch (e) {}
+      throw new Error(errorMessage);
     }
   } catch (error) {
     console.error(`OVERPASS API`, error);
@@ -97,3 +101,41 @@ export async function searchShapes(bbox) {
     return { coursePaths };
   }
 }
+
+export async function searchHoles(bbox) {
+  const bboxKey = bbox.join(',');
+  const query = `
+    [out:json][timeout:25][bbox:${bboxKey}];
+    (
+      way["leisure"="golf_course"];
+      way["golf"="hole"];
+    );
+    out body;
+    >;
+    out skel qt;
+  `.replace(/\s+/g, ' ');
+
+  try {
+    const endpointUrl = ENDPOINTS[DEFAULT_ENDPOINT];
+    const response = await fetch(endpointUrl, {
+      method: 'POST',
+      body: `data=${encodeURIComponent(query)}`,
+      headers: { 'user-agent': 'OGSMeshery/2.0'}
+    });
+    if (response.status === 200 && response.headers.get('content-type').startsWith('application/json')) {
+      const data = await response.json();
+      const geojson = osmtogeojson(data);
+      return { holes: geojson };
+    } else {
+      const body = await response.text();
+      let errorMessage = `Overpass API error (status ${response.status})`;
+      try {
+        if (body) errorMessage += `: ${body.substring(0, 150)}`;
+      } catch (e) {}
+      throw new Error(errorMessage);
+    }
+  } catch (error) {
+    console.error(`OVERPASS API`, error);
+    throw error;
+  }
+}

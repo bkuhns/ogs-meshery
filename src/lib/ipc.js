@@ -46,6 +46,7 @@ ipcMain.handle('project.exportMeshes', (_event, exportSettings, data) => exportM
 ipcMain.handle('project.getHeightMap', (_event) => project._heightMapCache);
 
 ipcMain.handle('project.updateHoleByNumber', (_event, holeNumber, update) => project.updateHoleByNumber(holeNumber, update));
+ipcMain.handle('project.updateHoles', (_event, updates) => project.updateHoles(updates));
 ipcMain.handle('project.updateScene', (_event, update) => project.updateScene(update));
 ipcMain.handle('project.updateGameSettings', (_event, update) => project.updateGameSettings(update));
 ipcMain.handle('project.selectHDRI', (_event) => project.selectHDRI());
@@ -82,6 +83,7 @@ ipcMain.handle('svg.getMeshLayers', (_event) => project.getMeshLayers());
 
 ipcMain.handle('map.lidarSources', (_event) => map.lidarSources());
 ipcMain.handle('map.searchShapes', (_event, coords) => map.searchShapes(coords));
+ipcMain.handle('map.searchHoles', (_event, coords) => map.searchHoles(coords));
 ipcMain.handle('map.listEndpoints', (_event) => map.listEndpoints());
 
 ipcMain.handle('lidar.downloadCourse', (_event, lidarGeoJson, courseBounds) => lidar.downloadCourse(lidarGeoJson, courseBounds));
