@@ -104,23 +104,33 @@ export function coursePathsToSVG(paths) {
     .join('\n  ');
 }
 
-export function geoJSONToSvgPaths(geojson) {
-  const size = Math.round(openProject.settings.distance * 1000);
-  const { south: minLat, west: minLon, north: maxLat, east: maxLon } = openProject.settings.bounds;
+// Linear projection of a lon/lat point across a course's bounds onto its
+// SVG/mesh coordinate space (a `size x size` square, `size` in mm = km *
+// 1000). Because the bbox is chosen to be a square in real-world meters,
+// lonRange != latRange (lon degrees are shorter away from the equator), and
+// stretching each axis independently to `size` gives the correct
+// equirectangular result for a small area. Shared by geoJSONToSvgPaths and
+// anything else (e.g. tree-mask generation) that needs to place real-world
+// coordinates into course space.
+export function projectLonLatToCourseMM(lon, lat, bounds, size) {
+  const { south: minLat, west: minLon, north: maxLat, east: maxLon } = bounds;
   const lonRange = maxLon - minLon;
   const latRange = maxLat - minLat;
+  return [
+    ((lon - minLon) / lonRange) * size,
+    ((maxLat - lat) / latRange) * size,   // flip Y: SVG y grows downward
+  ];
+}
+
+export function geoJSONToSvgPaths(geojson) {
+  const size = Math.round(openProject.settings.distance * 1000);
+  const bounds = openProject.settings.bounds;
+  const { south: minLat, west: minLon, north: maxLat, east: maxLon } = bounds;
 
   const bboxBox = [minLon, minLat, maxLon, maxLat];
   geojson = preprocessOsmGeoJson(geojson, bboxBox);
 
-  // Linear projection across the bbox. Because you've chosen the bbox to be
-  // a square in real-world meters, lonRange != latRange (lon degrees are
-  // shorter at lat ~40.5), and stretching each axis independently to `size`
-  // gives you the correct equirectangular result for a small area.
-  const project = ([lon, lat]) => [
-    ((lon - minLon) / lonRange) * size,
-    ((maxLat - lat) / latRange) * size,   // flip Y: SVG y grows downward
-  ];
+  const project = ([lon, lat]) => projectLonLatToCourseMM(lon, lat, bounds, size);
 
   const mid = ([x1, y1], [x2, y2]) => [(x1 + x2) / 2, (y1 + y2) / 2];
   const fmt = n => n.toFixed(2);
