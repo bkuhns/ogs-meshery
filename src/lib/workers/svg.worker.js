@@ -130,6 +130,8 @@ export async function generateCoursePolygons(courseLayers, layerSettings) {
       throw new Error(`Detected an unclosed path (${layer.name})`);
     }
 
+    polygon = cleanPolygonOutput(polygon, [], 0.01).polygon;
+
     let settings = {
       ...defaultSettings?.[layer.surface] ? defaultSettings?.[layer.surface] : defaultSettings.base
     };

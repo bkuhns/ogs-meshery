@@ -91,7 +91,38 @@ export function preprocessOsmGeoJson(geojson, boundsBox) {
   // 2. Separate into Areas and Lines
   const areas = validFeatures.filter(f => f.geometry.type === 'Polygon' || f.geometry.type === 'MultiPolygon');
   const lines = validFeatures.filter(f => f.geometry.type === 'LineString' || f.geometry.type === 'MultiLineString');
-  const finalFeatures = [...areas];
+  
+  // Union areas of the same surface type to dissolve shared boundaries
+  const finalFeatures = [];
+  const groupedAreas = {};
+  for (const area of areas) {
+    const surface = area.properties._mapping.surface;
+    if (!groupedAreas[surface]) {
+      groupedAreas[surface] = [];
+    }
+    groupedAreas[surface].push(area);
+  }
+  
+  for (const [surface, polys] of Object.entries(groupedAreas)) {
+    if (polys.length === 1) {
+      finalFeatures.push(polys[0]);
+      continue;
+    }
+    try {
+      // Use turf.union iteratively to dissolve overlaps
+      let unioned = polys[0];
+      for (let i = 1; i < polys.length; i++) {
+        const nextPoly = polys[i];
+        const res = turf.union(turf.featureCollection([unioned, nextPoly]));
+        if (res) unioned = res;
+      }
+      unioned.properties = polys[0].properties;
+      finalFeatures.push(unioned);
+    } catch (e) {
+      console.warn('Union failed for surface', surface, e);
+      finalFeatures.push(...polys);
+    }
+  }
 
   // 3. Process lines (buffers, and flowline association)
   for (const line of lines) {

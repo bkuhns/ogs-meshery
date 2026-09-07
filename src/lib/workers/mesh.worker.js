@@ -648,6 +648,33 @@ function triangulatePiece(layer, shape) {
   //   return;
   // }
 
+function splitLongEdges(ring, maxLen) {
+  if (!ring || ring.length < 3) return ring;
+  const out = [];
+  for (let i = 0; i < ring.length; i++) {
+    out.push(ring[i]);
+    const curr = ring[i];
+    const next = ring[(i + 1) % ring.length];
+    const dx = next[0] - curr[0];
+    const dy = next[1] - curr[1];
+    const len = Math.sqrt(dx * dx + dy * dy);
+    if (len > maxLen) {
+      const splits = Math.ceil(len / maxLen);
+      for (let j = 1; j < splits; j++) {
+        out.push([
+          curr[0] + dx * (j / splits),
+          curr[1] + dy * (j / splits)
+        ]);
+      }
+    }
+  }
+  return out;
+}
+
+  const MAX_EDGE_LEN = Math.max(layer.spacing || 1, 2.0);
+  shape.polygon = splitLongEdges(shape.polygon, MAX_EDGE_LEN);
+  shape.holes = shape.holes?.map(h => splitLongEdges(h, MAX_EDGE_LEN)) || [];
+
   const boundaryPts = shape.polygon;
   const holePts = shape.holes?.flat() || [];
   const { width, height, minY, minX } = getBoundingBox([shape.polygon, ...shape.holes]);
